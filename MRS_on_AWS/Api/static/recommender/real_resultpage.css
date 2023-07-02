@@ -47,7 +47,7 @@ body::before{
     max-width: 320px;
     margin: 1rem;
     padding: 2rem;
-    background-color: rgb(236, 224, 224);
+    background-color: rgba(229, 229, 229, 0.916);
     border-radius: 2%;
 }
 

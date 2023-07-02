@@ -146,13 +146,14 @@
     top: 50%;
     right: 50%;
     transform: translate(50%, -50%);
-    width: 50%;
-    height: 50%;
+    width: 90%;
+    height: 90%;
     transition: top 350ms 100ms cubic-bezier(0.23, 1, 0.32, 1),
         right 350ms 100ms cubic-bezier(0.23, 1, 0.32, 1),
         transform 250ms 200ms ease,
         width 550ms 500ms cubic-bezier(0.23, 1, 0.32, 1),
         height 550ms 500ms cubic-bezier(0.23, 1, 0.32, 1);
+ 
 }
 
 .nav ul {
@@ -201,12 +202,24 @@
     transition-delay: 70ms;
 }
 
+.nav ul li:nth-child(5) {
+    transition-delay: 200ms;
+}
+
+.nav ul li:nth-child(6) {
+    transition-delay: 210ms;
+}
+
+.nav ul li:nth-child(7) {
+    transition-delay: 220ms;
+}
+
 .nav ul li a {
     font-family: "Poppins", sans-serif;
     font-size: 7vh;
     text-transform: uppercase;
     line-height: 1.2;
-    font-weight: 800;
+    font-weight: 100;
     display: inline-block;
     position: relative;
     color: #ececee;
@@ -229,8 +242,8 @@
     margin-top: -1vh;
     width: 0;
     left: 0;
-    background-color: #1d1d23;
-    opacity: 0.8;
+    background-color: #030304;
+    opacity: 0.7;
     transition: width 150ms linear;
 }
 
@@ -262,6 +275,23 @@
 .menu-icon:checked~.nav ul li:nth-child(4) {
     transition-delay: 1000ms;
 }
+
+.menu-icon:checked~.nav ul li:nth-child(5) {
+    transition-delay: 1100ms;
+}
+
+.menu-icon:checked~.nav ul li:nth-child(6) {
+    transition-delay: 1200ms;
+}
+
+.menu-icon:checked~.nav ul li:nth-child(7) {
+    transition-delay: 1300ms;
+}
+
+.menu-icon:checked~.nav ul li:nth-child(8) {
+    transition-delay: 1400ms;
+}
+
 
 
 .logo {

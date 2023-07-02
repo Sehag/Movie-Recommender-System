@@ -29,7 +29,6 @@ body::before {
 }
 
 a {
-    text-decoration: none;
     color: rgb(0, 0, 0) !important;
 }
 
@@ -64,7 +63,7 @@ a {
     position: fixed;
     top : 30px;
     width : 100%;
-    background-color: rgba(211, 211, 211, 0.827);
+    background-color: rgba(241, 231, 231, 0.893);
 }
 
 .two h2{
@@ -74,7 +73,7 @@ a {
     position: fixed;
     top : 107px;
     width : 100%;
-    background-color: rgba(211, 211, 211, 0.827);
+    background-color: rgba(241, 231, 231, 0.893);
 }
 
 .message__result{
@@ -86,7 +85,7 @@ a {
     top : 450px;
     left: 300px;
     width : 60%;
-    background-color: rgba(211, 211, 211, 0.827);
+    background-color: rgba(241, 231, 231, 0.893);
 }
 
 .message__p1{
@@ -98,7 +97,7 @@ a {
     top : 476px;
     left: 300px;
     width : 60%;
-    background-color: rgba(211, 211, 211, 0.827);
+    background-color: rgba(241, 231, 231, 0.893);
 }
 
 .three {
@@ -120,7 +119,7 @@ a {
     justify-content: center;
     cursor: none;
     border-radius: 50%;
-    background: rgba(220, 219, 219, 0.827);
+    background: rgba(241, 231, 231, 0.893);
 }
 
 .social-links-span a:hover {
@@ -144,7 +143,8 @@ a {
     margin: 0;
     padding: 0%;
     text-align: center;
-    background-color: rgba(211, 211, 211, 0.827);
+    background-color: rgba(241, 231, 231, 0.893);
+    cursor:none;
 }
 
 
@@ -159,6 +159,9 @@ a {
     cursor:none;
 }
 
+.formcontainer:hover{
+    cursor: none;
+}
 .formcontainer input:hover {
     background-color: rgba(255, 255, 255, 0.9);
     cursor:none;
@@ -177,7 +180,14 @@ a {
 
 .formcontainer button:hover {
     background-color: rgba(255, 255, 255, 0.9);
-    cursor: none;   
+    cursor: none; 
+    margin: 0.5rem 0rem;
+    padding: 0.5rem;
+    color: black;
+    border-radius: 5%;
+    border-color: black;
+    border-width: 2px;
+    cursor:none;
 }
 
 
