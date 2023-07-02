@@ -1,0 +1,2 @@
+model.parquet filter=lfs diff=lfs merge=lfs -text
+movie_database.parquet filter=lfs diff=lfs merge=lfs -text
