@@ -1,0 +1,92 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="shortcut icon" href="{% static 'recommender/Images/logo.png' %}">
+
+    <title>Silver Screen Selects</title>
+    <link rel="stylesheet" href="{% static 'recommender/cursor.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'recommender/resultpage.css' %}" type="text/css">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons@latest/iconfont/tabler-icons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <link rel="Stylesheet" href="https://code.jquery.com/ui/1.10.2/themes/smoothness/jquery-ui.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css'>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.10.2/jquery-ui.js"></script>
+    <style>
+        .home-button {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background-color: #fff;
+            border-radius: 50%;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            color: #000;
+            font-size: 20px;
+            text-decoration: none;
+        }
+
+        .home-button:hover {
+            background-color: #f2f2f2;
+            cursor :none;
+        }
+
+        .home-button i {
+            pointer-events: none;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <div class="cursor-dot-outline"></div>
+    <div class="cursor-dot"></div>
+    <script src="{% static 'recommender/cursor.js' %}"></script>
+
+    <div class="title-container">
+        <a href="/" class="home-button"><i class="fa fa-home"></i></a>
+        <h3>Movies like: {{ input_movie_name }}</h3>
+    </div>
+
+    <div class="main-container">
+        {% if recomendation_found %}
+            {% if recomendation_found %}
+                {% for each_movie_dictionary in recommended_movies %}
+                    <div class="card-container">
+                        <h2 class="card-header"><i class="fa fa-film"></i> {{ each_movie_dictionary.movie_title }}</h2>
+                        <p class="card-para">Directed By: {{ each_movie_dictionary.movie_director }}</p>
+                        <p class="card-para">Release Date: {{ each_movie_dictionary.movie_release_date }}</p>
+                        <p class="card-para">Runtime: {{ each_movie_dictionary.runtime }}</p>
+                        <a target="_blank" href="{{ each_movie_dictionary.google_link }}" class="card-link">Google Search <i class="fa fa-arrow-circle-o-right"></i></a>
+                    </div>
+                {% endfor %} 
+            {% endif %}
+        {% endif %}
+
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenMax.min.js"></script>
+    <script>
+        function changeCss () {
+                var navElement = document.querySelector(".title-container");
+                this.scrollY < 100 ? navElement.style.backgroundColor = "rgba(223, 223, 223, 0.85)"  : navElement.style.backgroundColor = "rgba(255, 255, 255, 0.85)";
+            }
+
+        window.addEventListener("scroll", changeCss , true);
+    </script>
+</body>
+
+</html>

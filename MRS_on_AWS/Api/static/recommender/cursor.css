@@ -1,0 +1,20 @@
+.cursor-dot,
+.cursor-dot-outline {
+    pointer-events: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 10000000;
+    border-radius: 50%;
+    opacity: 0;
+    transform: translate(-50%, -50%);
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.cursor-dot {
+    width: 23px;
+    height: 23px;
+    background-image: url('Images/cursor.png');
+    background-size: cover;
+    cursor: url('Images/cursor.png'), auto;
+}
