@@ -68,7 +68,7 @@ def main(request):
     if request.method == 'GET':
         return render(
                 request,
-                'recommender/index.html',
+                'API/index.html',
                 {
                     'all_movie_names':titles_list,
                     'input_provided':'',
@@ -89,7 +89,7 @@ def main(request):
         else:
             return render(
                 request,
-                'recommender/index.html',
+                'API/index.html',
                 {
                     'all_movie_names':titles_list,
                     'input_provided':'yes',
@@ -104,7 +104,7 @@ def main(request):
         if final_recommendations:
             return render(
                 request,
-                'recommender/result.html',
+                'API/result.html',
                 {
                     'all_movie_names':titles_list,
                     'input_provided':'yes',
@@ -117,7 +117,7 @@ def main(request):
         else:
             return render(
                 request,
-                'recommender/index.html',
+                'API/index.html',
                 {
                     'all_movie_names':titles_list,
                     'input_provided':'yes',
@@ -133,7 +133,7 @@ def thrillers(request):
         top_movies = get_genre('thriller')
         return render(
                 request,
-                'recommender/thriller.html',
+                'API/thriller.html',
                 {
                     'all_movie_names':titles_list,
                     'input_provided':'yes',
@@ -149,7 +149,7 @@ def comedy(request):
         top_movies = get_genre('comedy')
         return render(
                 request,
-                'recommender/comedy.html',
+                'API/comedy.html',
                 {
                     'all_movie_names':titles_list,
                     'input_provided':'yes',
@@ -165,7 +165,7 @@ def drama(request):
         top_movies = get_genre('drama')
         return render(
                 request,
-                'recommender/drama.html',
+                'API/drama.html',
                 {
                     'all_movie_names':titles_list,
                     'input_provided':'yes',
@@ -181,7 +181,7 @@ def animated(request):
         top_movies = get_genre('animation')
         return render(
                 request,
-                'recommender/animated.html',
+                'API/animated.html',
                 {
                     'all_movie_names':titles_list,
                     'input_provided':'yes',
@@ -197,7 +197,7 @@ def romance(request):
         top_movies = get_genre('romance')
         return render(
                 request,
-                'recommender/romance.html',
+                'API/romance.html',
                 {
                     'all_movie_names':titles_list,
                     'input_provided':'yes',
@@ -213,7 +213,7 @@ def action(request):
         top_movies = get_genre('action')
         return render(
                 request,
-                'recommender/action.html',
+                'API/action.html',
                 {
                     'all_movie_names':titles_list,
                     'input_provided':'yes',
@@ -229,7 +229,7 @@ def horror(request):
         top_movies = get_genre('horror')
         return render(
                 request,
-                'recommender/horror.html',
+                'API/horror.html',
                 {
                     'all_movie_names':titles_list,
                     'input_provided':'yes',
